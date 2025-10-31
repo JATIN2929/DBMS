@@ -1,0 +1,112 @@
+🧱 What is Database Architecture?
+Database Architecture refers to the design structure of a database system that shows how data is stored, managed, and accessed by users and applications.
+It defines:
+How different components of the database system interact
+Where data is stored (locally or distributed)
+How users connect to it
+
+TYPES OF DATABASE ARCHITECTURE
+There are mainly three major types of database architectures:
+1-Tier Architecture
+2-Tier Architecture
+3-Tier Architecture
+
+🧩 1. Single-Tier Architecture (1-Tier)
+🧠 Definition:
+
+In 1-tier architecture, the database, application, and user interface all reside on the same machine.
+The user interacts directly with the database without any intermediary.
+
+📊 Structure:
+User ↔ Database
+
+🧰 Example:
+
+Microsoft Access (where database and application run on one PC)
+Local development systems
+
+✅ Advantages:
+
+Simple to design and manage
+
+Fast because there is no network delay
+
+❌ Disadvantages:
+
+Not suitable for multi-user systems
+
+Low security and scalability
+
+🔗 2. Two-Tier Architecture (Client–Server Architecture)
+🧠 Definition:
+
+In 2-tier architecture, the system is divided into two layers:
+
+Client (Front-end): User interface or application program
+
+Server (Back-end): Database server that stores and manages data
+
+The client sends SQL queries to the server, and the server returns results.
+
+📊 Structure:
+Client Application ↔ Database Server
+
+🧰 Example:
+
+Applications using ODBC, JDBC, or Oracle Client
+
+A bank’s teller system where front-end apps access a central database
+
+✅ Advantages:
+
+Faster response than 3-tier
+
+Easier to maintain than 1-tier
+
+❌ Disadvantages:
+
+Business logic is shared between client and server, making updates harder
+
+Limited scalability (more clients = more load on server)
+
+🌐 3. Three-Tier Architecture
+🧠 Definition:
+
+Three-tier architecture separates the system into three independent layers:
+
+Presentation Layer (Client/UI) – What the user sees and interacts with
+
+Application Layer (Business Logic) – Handles logic, rules, and data processing
+
+Database Layer (Data Storage) – Stores and manages data
+
+📊 Structure:
+Client (UI)
+     ↓
+Application Server (Logic)
+     ↓
+Database Server (Data)
+
+🧰 Example:
+
+Web applications using:
+
+Frontend: HTML, CSS, JavaScript
+
+Middle layer: Java, Python, or PHP
+
+Database: MySQL, Oracle, PostgreSQL
+
+✅ Advantages:
+
+High security (users can’t access the database directly)
+
+Easy to scale and maintain
+
+Business logic and data are separated
+
+❌ Disadvantages:
+
+More complex to set up
+
+Slightly slower because of extra communication between layers

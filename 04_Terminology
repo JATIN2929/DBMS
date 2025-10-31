@@ -1,0 +1,270 @@
+Basic Database Terminology
+1. Data
+
+Definition:
+Raw facts and figures that have no meaning on their own.
+Example: 101, Ravi, 15, Delhi
+
+When processed, it becomes information.
+Example: Student ID 101 belongs to Ravi, age 15, from Delhi.
+
+2. Database
+
+Definition:
+A collection of related data organized in a structured way so it can be easily accessed, managed, and updated.
+
+Example:
+A school database might contain data about:
+
+Students
+
+Teachers
+
+Courses
+
+Fees
+
+3. Table (Relation)
+
+Definition:
+In a Relational Database, data is stored in tables.
+Each table is called a Relation.
+
+Structure:
+A table consists of rows (tuples) and columns (attributes).
+
+Example:
+
+Roll_No	Name	Age	City
+101	Ravi	15	Delhi
+102	Meena	14	Pune
+
+Here,
+
+Table name: Student
+
+Columns: Roll_No, Name, Age, City
+
+Rows: Data of each student
+
+4. Attribute (Column / Field)
+
+Definition:
+An attribute is a column in a table that represents a property or characteristic of an entity.
+
+Example:
+In the Student table above:
+
+Attributes are → Roll_No, Name, Age, City
+
+Each attribute stores data of one kind (e.g., all names or all ages)
+
+5. Tuple (Row / Record)
+
+Definition:
+A tuple represents a single record or row in a table.
+
+Example:
+In the Student table:
+
+(101, Ravi, 15, Delhi) → is one tuple
+
+(102, Meena, 14, Pune) → another tuple
+
+Each tuple represents one complete set of data for a student.
+
+6. Domain
+
+Definition:
+A domain is the set of all possible values that an attribute can take.
+
+Example:
+
+Domain of Age = {10, 11, 12, 13, 14, 15, 16, …}
+
+Domain of City = {Delhi, Pune, Mumbai, Chennai, …}
+
+Each attribute has its own domain.
+
+7. Degree (of a Relation)
+
+Definition:
+The number of attributes (columns) in a table is called its degree.
+
+Example:
+If a Student table has 4 attributes → Roll_No, Name, Age, City
+➤ Degree = 4
+
+8. Cardinality (of a Relation)
+
+Definition:
+The number of tuples (rows) in a table is called its cardinality.
+
+Example:
+If the Student table has 5 students → Cardinality = 5
+
+Roll_No	Name	Age	City
+101	Ravi	15	Delhi
+102	Meena	14	Pune
+103	Anil	15	Chennai
+104	Riya	16	Mumbai
+105	Ajay	14	Delhi
+
+So,
+Degree = 4, Cardinality = 5
+
+9. Entity
+
+Definition:
+An entity is any real-world object that can be identified and stored in the database.
+Each entity has attributes that describe it.
+
+Example:
+
+Student, Teacher, Course, Employee, Car, etc.
+
+10. Entity Set
+
+Definition:
+A collection of similar entities.
+
+Example:
+All students in a school form a Student entity set.
+
+11. Relation
+
+Definition:
+A relation is a table with columns (attributes) and rows (tuples) in a relational database.
+
+Mathematically, a relation is a set of tuples sharing the same attributes.
+
+12. Relational Schema
+
+Definition:
+The structure or blueprint of a table that defines its attributes and their data types.
+
+Example:
+
+Student(Roll_No, Name, Age, City)
+
+
+This means:
+Table Student has attributes Roll_No, Name, Age, City.
+
+13. Relation Instance
+
+Definition:
+The actual content (data) stored in a table at a specific time.
+
+Example:
+If you add or remove rows from the Student table, the relation instance changes.
+
+14. Primary Key
+
+Definition:
+An attribute (or combination of attributes) that uniquely identifies each tuple in a table.
+
+Example:
+
+In Student, Roll_No can be the primary key.
+
+No two students can have the same Roll_No.
+
+15. Foreign Key
+
+Definition:
+An attribute in one table that refers to the primary key of another table, used to link related data.
+
+Example:
+
+Student Table:
+
+Roll_No	Name	Class_ID
+101	Ravi	10
+102	Meena	11
+
+Class Table:
+
+Class_ID	Class_Name
+10	X
+11	XI
+
+Here, Class_ID in Student is a Foreign Key referencing Class.Class_ID.
+
+16. Candidate Key
+
+Definition:
+All attributes that can uniquely identify a record are called candidate keys.
+One of them becomes the primary key.
+
+Example:
+In Student table:
+
+Roll_No and Aadhaar_No both can uniquely identify a student.
+
+Both are candidate keys, but Roll_No is chosen as primary key.
+
+17. Alternate Key
+
+Definition:
+The remaining candidate keys after choosing the primary key.
+
+Example:
+If Roll_No is primary, then Aadhaar_No becomes the alternate key.
+
+18. Composite Key
+
+Definition:
+A key formed by combining two or more attributes to uniquely identify a record.
+
+Example:
+In a Marks table:
+(Student_ID, Subject_ID) together form the composite key, since one student can appear in many subjects.
+
+19. Super Key
+
+Definition:
+Any set of attributes that can uniquely identify a tuple.
+
+Example:
+In Student:
+{Roll_No}, {Roll_No, Name}, {Roll_No, Age} — all are super keys
+(but only the minimal one is the primary key)
+
+20. Relationship
+
+Definition:
+A relationship describes how two or more entities are connected in a database.
+
+Example:
+
+Student enrolls in Course
+
+Teacher teaches Subject
+
+21. Relationship Set
+
+Definition:
+A collection of similar relationships between entity sets.
+
+Example:
+All the "enrollment" records between students and courses form a relationship set.
+
+22. Cardinality of Relationship
+
+Definition:
+The number of instances of one entity related to another entity.
+
+Types:
+
+One-to-One (1:1) – Each entity in A is related to one in B
+Example: A person has one passport
+
+One-to-Many (1:N) – One entity in A relates to many in B
+Example: One teacher teaches many students
+
+Many-to-One (N:1) – Many in A relate to one in B
+Example: Many students belong to one class
+
+Many-to-Many (M:N) – Many in A relate to many in B
+Example: Students enroll in many courses
